@@ -35,4 +35,34 @@ const password = [12, "welcome"];
 console.log(password);
 //7 undefind
 const age = undefined;
+// 11 enums intypescript
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 0] = "Admin";
+    Role[Role["User"] = 1] = "User";
+    Role[Role["Guest"] = 2] = "Guest";
+})(Role || (Role = {}));
+let myRole = Role.Admin;
+console.log(myRole);
+// 13 union  types in ts
+let id;
+id = 10;
+id = "TS1001";
+console.log(id);
+// function union types 
+function printId(id) {
+    console.log("ID:", id);
+}
+printId(101);
+printId("EMP101");
+// union with type checking
+function showValue(value) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value + 10);
+    }
+}
+showValue("surafel");
 //# sourceMappingURL=index.js.map

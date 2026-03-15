@@ -60,3 +60,48 @@ type users ={
 }
 
 
+// 11 enums intypescript
+enum Role {
+ Admin,
+ User,
+ Guest
+}
+
+let myRole: Role = Role.Admin
+console.log(myRole)
+
+
+
+
+// 13 union  types in ts
+let id: number | string
+
+id = 10
+id = "TS1001"
+console.log(id)
+
+
+
+// function union types 
+function printId(id: number | string) {
+  console.log("ID:", id)
+}
+
+printId(101)
+printId("EMP101")
+
+
+
+
+// union with type checking
+function showValue(value: number | string) {
+
+  if (typeof value === "string") {
+    console.log(value.toUpperCase())
+  } else {
+    console.log(value + 10)
+  }
+
+}
+
+showValue("surafel")
