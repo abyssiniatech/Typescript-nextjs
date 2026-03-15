@@ -142,3 +142,18 @@ const worker: Staff = {
 const user1: User = {
   name: "Surafel"
 }
+
+
+
+// 16 In TypeScript, readonly properties are properties that cannot be changed after the object is created.
+
+
+type info = {
+  readonly ids: number
+  name: string
+}
+
+const User: info = {
+  ids: 1,
+  name: "Surafel"
+}

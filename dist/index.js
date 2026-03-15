@@ -74,4 +74,8 @@ const worker = {
 const user1 = {
     name: "Surafel"
 };
+const User = {
+    ids: 1,
+    name: "Surafel"
+};
 //# sourceMappingURL=index.js.map
