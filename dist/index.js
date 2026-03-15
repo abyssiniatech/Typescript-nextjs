@@ -78,4 +78,17 @@ const User = {
     ids: 1,
     name: "Surafel"
 };
+// 17 8.Type Narrowing in TypeScript
+// In TypeScript, Type Narrowing means reducing a variable’s possible types to a more specific type so the compiler knows exactly what type it is at that moment.
+// This is very useful when using Union Types like:
+// number | string
+// Because TypeScript must determine which type is being used.
+function printValue(value) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value + 10);
+    }
+}
 //# sourceMappingURL=index.js.map
