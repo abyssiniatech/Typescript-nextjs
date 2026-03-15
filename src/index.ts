@@ -105,3 +105,26 @@ function showValue(value: number | string) {
 }
 
 showValue("surafel")
+
+
+let direction:"south" | "north" |"east" | "west";
+direction="south"
+
+
+
+
+// 15 insertion type in typescript 
+type Person = {
+  name: string
+}
+
+type Employee = {
+  employeeId: number
+}
+
+type Staff = Person & Employee
+
+const worker: Staff = {
+  name: "Surafel",
+  employeeId: 101
+}

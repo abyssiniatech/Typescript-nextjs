@@ -65,4 +65,10 @@ function showValue(value) {
     }
 }
 showValue("surafel");
+let direction;
+direction = "south";
+const worker = {
+    name: "Surafel",
+    employeeId: 101
+};
 //# sourceMappingURL=index.js.map
