@@ -30,4 +30,9 @@ let numbers = [1, 2, 3, 4];
 let names = ["John", "Sara"];
 console.log(numbers.map((list) => console.log(list)));
 console.log(names);
+//6 tuples
+const password = [12, "welcome"];
+console.log(password);
+//7 undefind
+const age = undefined;
 //# sourceMappingURL=index.js.map

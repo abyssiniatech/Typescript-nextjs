@@ -36,3 +36,27 @@ let numbers: number[] = [1,2,3,4]
 let names: string[] = ["John","Sara"]
 console.log(numbers.map((list)=>console.log(list)))
 console.log(names)
+
+//6 tuples
+const password:[number,string]=[12,"welcome"]
+console.log(password)
+
+//7 undefind
+const age:undefined=undefined
+
+// interface type
+interface students{
+   name:string;
+   age:number;
+   email:string
+}
+
+
+//9 type
+type users ={
+    id:number | string
+    age?:number
+    email:string
+}
+
+
