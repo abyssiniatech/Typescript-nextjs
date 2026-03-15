@@ -60,3 +60,123 @@ type users ={
 }
 
 
+// 11 enums intypescript
+enum Role {
+ Admin,
+ User,
+ Guest
+}
+
+let myRole: Role = Role.Admin
+console.log(myRole)
+
+
+
+
+// 13 union  types in ts
+let id: number | string
+
+id = 10
+id = "TS1001"
+console.log(id)
+
+
+
+// function union types 
+function printId(id: number | string) {
+  console.log("ID:", id)
+}
+
+printId(101)
+printId("EMP101")
+
+
+
+
+// union with type checking
+function showValue(value: number | string) {
+
+  if (typeof value === "string") {
+    console.log(value.toUpperCase())
+  } else {
+    console.log(value + 10)
+  }
+
+}
+
+showValue("surafel")
+
+
+let direction:"south" | "north" |"east" | "west";
+direction="south"
+
+
+
+
+// 15 insertion type in typescript 
+type Person = {
+  name: string
+}
+
+type Employee = {
+  employeeId: number
+}
+
+type Staff = Person & Employee
+
+const worker: Staff = {
+  name: "Surafel",
+  employeeId: 101
+}
+
+
+
+
+// 15 optional types    => 	Optional properties
+
+  type User = {
+  name: string
+  age?: number
+}
+
+const user1: User = {
+  name: "Surafel"
+}
+
+
+
+// 16 In TypeScript, readonly properties are properties that cannot be changed after the object is created.
+
+
+type info = {
+  readonly ids: number
+  name: string
+}
+
+const User: info = {
+  ids: 1,
+  name: "Surafel"
+}
+
+
+
+
+
+// 17 8.Type Narrowing in TypeScript
+
+// In TypeScript, Type Narrowing means reducing a variable’s possible types to a more specific type so the compiler knows exactly what type it is at that moment.
+
+// This is very useful when using Union Types like:
+
+// number | string
+
+// Because TypeScript must determine which type is being used.
+function printValue(value: number | string) {
+
+  if (typeof value === "string") {
+    console.log(value.toUpperCase())
+  } else {
+    console.log(value + 10)
+  }
+
+}

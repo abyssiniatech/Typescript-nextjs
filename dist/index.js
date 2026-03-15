@@ -35,4 +35,60 @@ const password = [12, "welcome"];
 console.log(password);
 //7 undefind
 const age = undefined;
+// 11 enums intypescript
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 0] = "Admin";
+    Role[Role["User"] = 1] = "User";
+    Role[Role["Guest"] = 2] = "Guest";
+})(Role || (Role = {}));
+let myRole = Role.Admin;
+console.log(myRole);
+// 13 union  types in ts
+let id;
+id = 10;
+id = "TS1001";
+console.log(id);
+// function union types 
+function printId(id) {
+    console.log("ID:", id);
+}
+printId(101);
+printId("EMP101");
+// union with type checking
+function showValue(value) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value + 10);
+    }
+}
+showValue("surafel");
+let direction;
+direction = "south";
+const worker = {
+    name: "Surafel",
+    employeeId: 101
+};
+const user1 = {
+    name: "Surafel"
+};
+const User = {
+    ids: 1,
+    name: "Surafel"
+};
+// 17 8.Type Narrowing in TypeScript
+// In TypeScript, Type Narrowing means reducing a variable’s possible types to a more specific type so the compiler knows exactly what type it is at that moment.
+// This is very useful when using Union Types like:
+// number | string
+// Because TypeScript must determine which type is being used.
+function printValue(value) {
+    if (typeof value === "string") {
+        console.log(value.toUpperCase());
+    }
+    else {
+        console.log(value + 10);
+    }
+}
 //# sourceMappingURL=index.js.map
