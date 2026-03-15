@@ -128,3 +128,17 @@ const worker: Staff = {
   name: "Surafel",
   employeeId: 101
 }
+
+
+
+
+// 15 optional types    => 	Optional properties
+
+  type User = {
+  name: string
+  age?: number
+}
+
+const user1: User = {
+  name: "Surafel"
+}

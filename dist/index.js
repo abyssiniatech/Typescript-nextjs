@@ -71,4 +71,7 @@ const worker = {
     name: "Surafel",
     employeeId: 101
 };
+const user1 = {
+    name: "Surafel"
+};
 //# sourceMappingURL=index.js.map
