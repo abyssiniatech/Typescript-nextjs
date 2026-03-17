@@ -83,3 +83,11 @@ const updateUser = (user: Partial<User>) => {
 updateUser({ name: "Surafel" })
   type UserPreview = Pick<User, "name">
   type UserWithoutAge = Omit<User, "age">
+
+
+
+
+  // 3️⃣ TYPING EVENTS (React)
+//   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+//   console.log(event.currentTarget)
+// }

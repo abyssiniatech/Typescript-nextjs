@@ -40,4 +40,8 @@ const updateUser = (user) => {
     console.log(user);
 };
 updateUser({ name: "Surafel" });
+// 3️⃣ TYPING EVENTS (React)
+//   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+//   console.log(event.currentTarget)
+// }
 //# sourceMappingURL=index.js.map
