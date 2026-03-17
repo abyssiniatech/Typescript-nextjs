@@ -36,4 +36,8 @@ const empty = getFirstSafe([]); // Type is string | undefined
 if (empty !== undefined) {
     console.log(empty.toUpperCase());
 }
+const updateUser = (user) => {
+    console.log(user);
+};
+updateUser({ name: "Surafel" });
 //# sourceMappingURL=index.js.map

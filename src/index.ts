@@ -68,3 +68,18 @@ const empty = getFirstSafe<string>([]); // Type is string | undefined
 if (empty !== undefined) {
     console.log(empty.toUpperCase());
 }
+
+
+// 2️⃣ UTILITY TYPES
+// TypeScript provides powerful built-in helpers.
+interface User {
+  name: string
+  age: number
+}
+
+const updateUser = (user: Partial<User>) => {
+  console.log(user)
+}
+updateUser({ name: "Surafel" })
+  type UserPreview = Pick<User, "name">
+  type UserWithoutAge = Omit<User, "age">
