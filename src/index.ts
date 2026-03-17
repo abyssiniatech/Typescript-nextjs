@@ -1,182 +1,70 @@
-// datatypes in typescript
-// 1. numbers 
-let num1=12;
-const num2:number=23;
-const num3:number=28;
-
-// run the values
-console.log(num1);
-console.log(num2);
-console.log(num3);
+// function  in  ts
+const Hello=()=>{
+  console.log("welcome ")
+}
+Hello()
 
 
-// 2. string typescript
-const Firstname:string="Surafel";
-const Lastname:string="Berehun";
-const email:string="surafelmengist@gmail.com"
-// run 
-console.log(Firstname)
-console.log(Lastname)
-console.log(email)
+interface country {
+  id:number
+  name:string
+  addrese:string
+  city?:string | null
+}
+const countries=[
+  {id:1,city:"Addis Ababa", name:"ethiopia",addrese:"East Africa"},
+  {id:2,city:"Nirobi", name:"Kenya",addrese:"East Africa"},
+  {id:3,city:"Mosco", name:"Russia",addrese:"North Europe"},
+  
+]
+  
+
+function city(){
+   return  countries.map((list)=>console.log(list.id,list.name,list.city,list.addrese))
+}
+   city()
 
 
-// 3. boolean
-let isLogin:boolean=true;
-const isStudent:boolean=false;
 
-console.log(isLogin)
-console.log(isStudent)
-
-// 4 any type
-const fraind:any=12
-console.log(fraind)
-
-// 5 arry
-let numbers: number[] = [1,2,3,4]
-let names: string[] = ["John","Sara"]
-console.log(numbers.map((list)=>console.log(list)))
-console.log(names)
-
-//6 tuples
-const password:[number,string]=[12,"welcome"]
-console.log(password)
-
-//7 undefind
-const age:undefined=undefined
-
-// interface type
-interface students{
-   name:string;
-   age:number;
-   email:string
+   interface User {
+  id: number
+  name: string
+  email: string
 }
 
+type PartialUser = Partial<User>
 
-//9 type
-type users ={
-    id:number | string
-    age?:number
-    email:string
+
+
+
+
+
+// Generics 
+function identity<T>(value: T): T {
+  return value
 }
 
-
-// 11 enums intypescript
-enum Role {
- Admin,
- User,
- Guest
-}
-
-let myRole: Role = Role.Admin
-console.log(myRole)
+const lab1=identity<string>("Hello")
+const lab2=identity<number>(10)
+console.log(lab1)
+console.log(lab2)
 
 
 
 
-// 13 union  types in ts
-let id: number | string
-
-id = 10
-id = "TS1001"
-console.log(id)
-
-
-
-// function union types 
-function printId(id: number | string) {
-  console.log("ID:", id)
-}
-
-printId(101)
-printId("EMP101")
-
-
-
-
-// union with type checking
-function showValue(value: number | string) {
-
-  if (typeof value === "string") {
-    console.log(value.toUpperCase())
-  } else {
-    console.log(value + 10)
+// Generic Array
+function getFirstSafe<T>(arr: T[]): T | undefined {
+  if (arr.length === 0) {
+    return undefined;
   }
-
+  return arr[0];
 }
 
-showValue("surafel")
+const num = getFirstSafe<number>([1, 2, 3]); // Type is number | undefined
+const str = getFirstSafe<string>(["a", "b", "c"]); // Type is string | undefined
+const empty = getFirstSafe<string>([]); // Type is string | undefined
 
-
-let direction:"south" | "north" |"east" | "west";
-direction="south"
-
-
-
-
-// 15 insertion type in typescript 
-type Person = {
-  name: string
-}
-
-type Employee = {
-  employeeId: number
-}
-
-type Staff = Person & Employee
-
-const worker: Staff = {
-  name: "Surafel",
-  employeeId: 101
-}
-
-
-
-
-// 15 optional types    => 	Optional properties
-
-  type User = {
-  name: string
-  age?: number
-}
-
-const user1: User = {
-  name: "Surafel"
-}
-
-
-
-// 16 In TypeScript, readonly properties are properties that cannot be changed after the object is created.
-
-
-type info = {
-  readonly ids: number
-  name: string
-}
-
-const User: info = {
-  ids: 1,
-  name: "Surafel"
-}
-
-
-
-
-
-// 17 8.Type Narrowing in TypeScript
-
-// In TypeScript, Type Narrowing means reducing a variable’s possible types to a more specific type so the compiler knows exactly what type it is at that moment.
-
-// This is very useful when using Union Types like:
-
-// number | string
-
-// Because TypeScript must determine which type is being used.
-function printValue(value: number | string) {
-
-  if (typeof value === "string") {
-    console.log(value.toUpperCase())
-  } else {
-    console.log(value + 10)
-  }
-
+// TypeScript now forces you to handle the undefined case
+if (empty !== undefined) {
+    console.log(empty.toUpperCase());
 }
